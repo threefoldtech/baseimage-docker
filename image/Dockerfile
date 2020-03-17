@@ -1,8 +1,8 @@
-ARG BASE_IMAGE=ubuntu:18.04
+ARG BASE_IMAGE=ubuntu:19.10
 FROM $BASE_IMAGE
 MAINTAINER Phusion <info@phusion.nl>
 
-ARG QEMU_ARCH
+ARG QEMU_ARCH=amd64
 ADD x86_64_qemu-${QEMU_ARCH}-static.tar.gz /usr/bin
 
 COPY . /bd_build
